@@ -456,7 +456,7 @@ def do_post_status(status, prnum):
 
 def live():
     global result_dict
-    Disque.connect(["localhost:7711"])
+    Disque.connect([os.environ.get("DWQ_DISQUE_URL", "localhost:7711")])
 
     http_root = os.environ.get("CI_BUILD_HTTP_ROOT", "")
 
