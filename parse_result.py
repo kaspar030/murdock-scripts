@@ -509,7 +509,7 @@ def live():
 if __name__=="__main__":
     argc = len(sys.argv)
     if argc < 2 or argc > 3:
-        printf("error: %s <json-data>|<<queue-name> <pr-num>" % sys.argv[0], file=sys.stderr)
+        print("error: %s <json-data>|<<queue-name> <pr-num>" % sys.argv[0], file=sys.stderr)
         sys.exit(1)
 
     if argc == 2:
