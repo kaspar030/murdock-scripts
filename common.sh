@@ -15,6 +15,7 @@ _gethead() {
 gethead() {
     local url="$1"
     local branch="${2:-master}"
+    local tmpdir=""
 
     local gitdir="$(git rev-parse --show-toplevel 2>/dev/null)"
     [ -z "$gitdir" ] && {
