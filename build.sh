@@ -67,7 +67,7 @@ create_merge_commit() {
             false
         }
         echo "--- pushing result"
-        git -C $tmpdir push --force cache_repo
+        git -C $tmpdir push --force --set-upstream cache_repo $MERGE_BRANCH
         } 2>&1 )"
     RES=$?
     set -e
