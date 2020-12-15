@@ -1,4 +1,4 @@
-#!/bin/sh -e -u
+#!/bin/sh -eu
 
 ACTION="$1"
 
