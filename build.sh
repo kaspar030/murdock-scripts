@@ -106,6 +106,9 @@ case "$ACTION" in
 
         echo "---- using merge commit SHA1=${CI_MERGE_COMMIT}"
 
+        echo aborting
+        exit 1
+
         dwqc "test -x .murdock" || {
             echo "PR does not contain .murdock build script, please rebase!"
             rm -f result.json
